@@ -58,15 +58,12 @@ body {
 
 .top {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /*flex-shrink: 3;*/
 }
 
 .bottom {
   padding-left: 60px;
-  display: flex;
   flex-direction: column;
 }
 
