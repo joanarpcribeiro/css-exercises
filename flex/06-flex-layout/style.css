@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+html, body {
+  height: 100%;
+}
+
 body {
   /*height: 100vh;*/
   display: flex;
@@ -10,7 +15,11 @@ body {
 }
 
 img {
-  width: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
 }
 
 button {
@@ -18,6 +27,11 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
 }
 
 input {
@@ -39,8 +53,24 @@ li {
   float: left;
 }
 
-a{
+a {
+  color: gray;
   text-decoration: none;
+  
+
+}
+
+.header {
+ /*position: fixed;
+  top: 0; THIS WOULD GO WITH position: fixed; bottom:0; in footer*/
+}
+
+.footer {
+  background-color: #eeeeee;
+  /*position: fixed;
+  bottom: 0; THIS WOULD GO WITH position: fixed; bottom:0; in header*/
+  flex-shrink: 0; /*THIS GOES WITH  flex: 1 0 auto; on .content and height:100% on html, body
+  flex-shrink: 0 overrides the default of 1 so the <footer> doesn't shrink*/
 }
 
 .header, .footer {
@@ -48,7 +78,24 @@ a{
   justify-content: space-between;
 }
 
-.left-links {
 
-  justify-content: space-between;
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto; /*THIS WOULD GO WITH  flex-shrink: 0; on .footer and height:100% on html, body 
+  flex: 1 0 auto; allows <content> to grow to fit the rest of the available space.*/
+  justify-content: center;
+}
+
+
+ul.left-links {
+  display: flex;
+  gap: 20px;
+  padding-left: 15px;
+}
+
+ul.right-links {
+  display: flex;
+  gap: 20px;
+  padding-right: 15px;
 }
