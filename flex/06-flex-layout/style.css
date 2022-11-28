@@ -22,8 +22,16 @@ img {
 
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.25%;
+  
+}
+
 button {
   font-family: Roboto, sans-serif;
+  padding: 10px;
   border: none;
   border-radius: 8px;
   background: #eee;
@@ -85,6 +93,7 @@ a {
   flex: 1 0 auto; /*THIS WOULD GO WITH  flex-shrink: 0; on .footer and height:100% on html, body 
   flex: 1 0 auto; allows <content> to grow to fit the rest of the available space.*/
   justify-content: center;
+  gap: 0.5%;
 }
 
 
